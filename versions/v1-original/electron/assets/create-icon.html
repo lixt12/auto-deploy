@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>创建应用图标</title>
+</head>
+<body>
+    <canvas id="canvas" width="256" height="256" style="border: 1px solid #ccc;"></canvas>
+    <br><br>
+    <button onclick="downloadIcon()">下载PNG图标</button>
+    <button onclick="downloadICO()">下载ICO图标</button>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // 绘制应用图标
+        function drawIcon() {
+            // 背景渐变
+            const gradient = ctx.createLinearGradient(0, 0, 256, 256);
+            gradient.addColorStop(0, '#1890ff');
+            gradient.addColorStop(1, '#096dd9');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 256, 256);
+            
+            // 绘制部署图标
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 120px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('🚀', 128, 128);
+            
+            // 添加文字
+            ctx.font = 'bold 24px Arial';
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText('Deploy', 128, 200);
+        }
+        
+        function downloadIcon() {
+            const link = document.createElement('a');
+            link.download = 'icon.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        function downloadICO() {
+            // 简单的ICO下载（实际应该使用专门的库转换）
+            const link = document.createElement('a');
+            link.download = 'icon.ico';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // 绘制图标
+        drawIcon();
+    </script>
+</body>
+</html>
