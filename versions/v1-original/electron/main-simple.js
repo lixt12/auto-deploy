@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron');
+﻿const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
 
 let mainWindow;
@@ -122,4 +122,5 @@ app.on('window-all-closed', () => {
 
 console.log('Electron开发版启动');
 console.log('前端地址: http://localhost:3000');
-console.log('后端地址: http://localhost:8088');
+console.log('后端地址: http://localhost:18088');
+

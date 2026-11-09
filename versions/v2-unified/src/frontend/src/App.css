@@ -1,0 +1,153 @@
+﻿.App {
+  min-height: 100vh;
+  text-align: left;
+  color: #111111;
+  background: #f3f3f3;
+}
+
+.app-shell {
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-sider.ant-layout-sider {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.app-sider .ant-layout-sider-children {
+  height: 100%;
+}
+
+.app-sider-inner {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-sider-menu-wrap {
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.app-main-layout {
+  min-width: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.ant-layout-sider {
+  border-right: 1px solid #2b2b2b;
+}
+
+.ant-menu-dark {
+  background: transparent;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background: #2b2b2b !important;
+}
+
+.ant-layout-header {
+  background: #ffffff;
+  padding: 0 24px;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: none;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ant-btn-primary {
+  background: #111111;
+  border-color: #111111;
+  box-shadow: none;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background: #2a2a2a;
+  border-color: #2a2a2a;
+}
+
+.ant-btn-primary:active {
+  background: #000000;
+  border-color: #000000;
+}
+
+.page-header {
+  background: #ffffff;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+  box-shadow: none;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #111111;
+}
+
+.page-header p {
+  margin: 6px 0 0;
+  color: #666666;
+}
+
+.ant-card {
+  border-color: #e6e6e6;
+  box-shadow: none;
+}
+
+.ant-card-head {
+  border-bottom-color: #efefef;
+}
+
+.ant-table-thead > tr > th {
+  background: #f7f7f7;
+  color: #111111;
+  font-weight: 600;
+}
+
+.ant-tag,
+.ant-tag[class*='ant-tag-'] {
+  color: #1f1f1f !important;
+  background: #f2f2f2 !important;
+  border-color: #d9d9d9 !important;
+}
+
+.ant-badge-status-success .ant-badge-status-dot,
+.ant-badge-status-error .ant-badge-status-dot,
+.ant-badge-status-processing .ant-badge-status-dot,
+.ant-badge-status-warning .ant-badge-status-dot {
+  background: #555555 !important;
+}

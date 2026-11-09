@@ -1,4 +1,4 @@
-# 自动化部署系统 - Node.js轻量版后端
+﻿# 自动化部署系统 - Node.js轻量版后端
 
 这是原Java Spring Boot后端的轻量化Node.js替代版本，性能提升10倍以上！
 
@@ -52,8 +52,8 @@ npm run dev
 
 ## 📊 服务信息
 
-- **端口**: 8088
-- **健康检查**: http://localhost:8088/health
+- **端口**: 18088
+- **健康检查**: http://localhost:18088/health
 - **数据库**: ./data/database.sqlite
 - **日志文件**: ./logs/
 
@@ -106,7 +106,7 @@ npm run init-db
 复制 `.env.example` 到 `.env` 并修改配置：
 
 ```env
-PORT=8088
+PORT=18088
 DATABASE_PATH=./data/database.sqlite
 JWT_SECRET=your-secret-key
 JWT_EXPIRES_IN=24h
@@ -133,8 +133,8 @@ npm run dev
 ### 验证安装
 ```bash
 # 检查服务状态
-curl http://localhost:8088/health
-# 或在浏览器访问: http://localhost:8088/health
+curl http://localhost:18088/health
+# 或在浏览器访问: http://localhost:18088/health
 ```
 
 ## 🆚 与Java版本对比
@@ -182,7 +182,7 @@ curl http://localhost:8088/health
 **Q: 启动失败，提示端口被占用**
 ```bash
 # 检查端口占用
-netstat -ano | findstr :8088
+netstat -ano | findstr :18088
 # 或使用其他端口
 set PORT=8089 && npm start
 ```
@@ -200,7 +200,7 @@ chmod 755 data
 - 确认网络连通性和防火墙设置
 
 **Q: 前端无法连接后端**
-- 确认后端服务已启动（访问 http://localhost:8088/health）
+- 确认后端服务已启动（访问 http://localhost:18088/health）
 - 检查CORS配置是否正确
 - 验证API接口路径
 
@@ -224,7 +224,7 @@ type logs\combined.log
 tasklist | findstr node
 
 # 监控API响应时间
-curl -w "@curl-format.txt" -o /dev/null -s http://localhost:8088/health
+curl -w "@curl-format.txt" -o /dev/null -s http://localhost:18088/health
 ```
 
 ## 🚀 部署建议
@@ -260,3 +260,4 @@ pm2 save
 🎉 **轻量化改造完成！享受10倍性能提升！**
 
 **联系支持**: 如遇问题请查看日志文件或提交Issue
+

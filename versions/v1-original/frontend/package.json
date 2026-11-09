@@ -1,0 +1,86 @@
+﻿{
+  "name": "auto-deploy-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "public/electron.js",
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.43",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "antd": "^5.12.0",
+    "axios": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.7.4",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "builtin-modules": "^5.0.0",
+    "chokidar": "^3.5.3",
+    "concurrently": "^7.6.0",
+    "electron": "^22.0.0",
+    "electron-builder": "^24.0.0",
+    "wait-on": "^7.0.1"
+  },
+  "scripts": {
+    "start": "node scripts/run-cra.js start",
+    "build": "node scripts/run-cra.js build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron public/electron.js",
+    "electron-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron public/electron.js\"",
+    "electron-pack": "npm run build && electron-builder",
+    "pack-dev": "npm run build && electron-builder --config electron-builder-dev.config.js",
+    "pack-hotreload": "npm run build && electron-builder --config electron-builder-hotreload.config.js",
+    "electron-hotreload": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron ../electron/main-hotreload.js\"",
+    "electron-lightweight": "electron ../electron/main-nodejs.js",
+    "start-lightweight": "npm run build && npm run electron-lightweight"
+  },
+  "proxy": "http://localhost:18088",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "appId": "com.sipsg.autodeploy",
+    "productName": "自动化部署系统",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "public/electron.js"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "public/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
+

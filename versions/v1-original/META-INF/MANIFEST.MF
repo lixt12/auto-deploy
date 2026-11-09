@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Spring-Boot-Classpath-Index: BOOT-INF/classpath.idx
+Implementation-Title: Auto Deploy System
+Implementation-Version: 1.0.0
+Spring-Boot-Layers-Index: BOOT-INF/layers.idx
+Start-Class: com.sipsg.autodeploy.AutoDeployApplication
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+Build-Jdk-Spec: 1.8
+Spring-Boot-Version: 2.7.18
+Created-By: Maven JAR Plugin 3.2.2
+Main-Class: org.springframework.boot.loader.JarLauncher
+

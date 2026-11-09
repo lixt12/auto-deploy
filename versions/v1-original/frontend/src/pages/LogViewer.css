@@ -1,0 +1,186 @@
+.log-container {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.4;
+  padding: 16px;
+  border-radius: 6px;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #d9d9d9;
+  position: relative;
+}
+
+/* 现代化滚动条样式 */
+.log-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.log-container::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  border-radius: 4px;
+}
+
+.log-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4a9eff 0%, #0078d4 100%);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.log-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6bb1ff 0%, #106ebe 100%);
+}
+
+/* 日志条目样式 */
+.log-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.log-entry:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  border-radius: 4px;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+/* 时间戳样式 */
+.log-timestamp {
+  color: #8d8d8d;
+  font-size: 12px;
+  white-space: nowrap;
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+/* 日志级别样式 */
+.log-level {
+  font-weight: bold;
+  text-align: center;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  min-width: 50px;
+  flex-shrink: 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 日志级别发光点 */
+.log-level::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: pulse 2s infinite;
+}
+
+.log-level.error {
+  background: rgba(255, 77, 79, 0.2);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 77, 79, 0.3);
+}
+
+.log-level.error::before {
+  background: #ff4d4f;
+  box-shadow: 0 0 8px rgba(255, 77, 79, 0.6);
+}
+
+.log-level.warn {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.log-level.warn::before {
+  background: #faad14;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.6);
+}
+
+.log-level.info {
+  background: rgba(24, 144, 255, 0.2);
+  color: #40a9ff;
+  border: 1px solid rgba(24, 144, 255, 0.3);
+}
+
+.log-level.info::before {
+  background: #1890ff;
+  box-shadow: 0 0 8px rgba(24, 144, 255, 0.6);
+}
+
+.log-level.debug {
+  background: rgba(82, 196, 26, 0.2);
+  color: #73d13d;
+  border: 1px solid rgba(82, 196, 26, 0.3);
+}
+
+.log-level.debug::before {
+  background: #52c41a;
+  box-shadow: 0 0 8px rgba(82, 196, 26, 0.6);
+}
+
+/* 来源样式 */
+.log-source {
+  color: #b8b8b8;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  min-width: 100px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+/* 消息样式 */
+.log-message {
+  color: #f0f0f0;
+  flex: 1;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+/* 发光动画 */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .log-entry {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .log-timestamp,
+  .log-level,
+  .log-source {
+    min-width: auto;
+    width: auto;
+  }
+}

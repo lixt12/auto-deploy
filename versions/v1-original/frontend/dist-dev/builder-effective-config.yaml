@@ -1,0 +1,47 @@
+directories:
+  output: dist-dev
+  buildResources: assets
+files:
+  - filter:
+      - build/**/*
+      - build/**/*
+      - ../electron/main-simple.js
+      - ../electron/assets/**/*
+      - node_modules/**/*
+      - ../target/auto-deploy-*.jar
+      - ../src/main/resources/auto-deploy.yml
+extraMetadata:
+  main: build/electron.js
+appId: com.sipsg.autodeploy.dev
+productName: AutoDeploy-Dev
+extraResources:
+  - from: ../target/
+    to: backend/
+    filter:
+      - auto-deploy-*.jar
+  - from: ../src/main/resources/
+    to: config/
+    filter:
+      - auto-deploy.yml
+      - application.yml
+win:
+  target:
+    - target: portable
+      arch:
+        - x64
+  sign: false
+  verifyUpdateCodeSignature: false
+  forceCodeSigning: false
+  signAndEditExecutable: false
+portable:
+  artifactName: AutoDeploy-Dev-${version}-portable.exe
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  shortcutName: AutoDeploy Dev
+  artifactName: AutoDeploy-Dev-${version}-setup.exe
+forceCodeSigning: false
+compression: store
+npmRebuild: false
+extends: react-cra
+electronVersion: 22.3.27

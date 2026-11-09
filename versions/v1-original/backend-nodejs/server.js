@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
@@ -13,7 +13,7 @@ const serverRoutes = require('./routes/servers');
 const logRoutes = require('./routes/logs');
 
 const app = express();
-const PORT = process.env.PORT || 8088;
+const PORT = process.env.PORT || 18088;
 
 // 中间件配置
 app.use(cors());
@@ -102,3 +102,4 @@ process.on('SIGTERM', async () => {
 });
 
 startServer();
+

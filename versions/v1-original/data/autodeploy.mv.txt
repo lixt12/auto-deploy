@@ -1,0 +1,93 @@
+File D:/IdeaProjects/12/auto-deploy/versions/v1-original/data/autodeploy.mv.db, 32768 bytes, 0 MB
+0000 fileHeader H:2,block:2,blockSize:1000,chunk:5,created:19cb182651a,format:2,version:5,fletcher:f3b714a2
+1000 fileHeader H:2,block:2,blockSize:1000,chunk:5,created:19cb182651a,format:2,version:5,fletcher:f3b714a2
+
+2000 chunkHeader chunk:5,block:2,len:1,pages:3,max:a00,map:12,next:3,root:14000020d10,time:2583a,version:5,toc:9ce
++00ad leaf, map 2, 13 entries, 963 bytes, maxLen 400
++0470 leaf, map 1, 30 entries, 964 bytes, maxLen 400
++0834 leaf, map 0, 6 entries, 410 bytes, maxLen 200
+    chunk.3 = chunk:3,block:4,len:2,liveMax:0,livePages:0,map:10,max:2100,next:6,pages:4,root:c000067790,time:5de,unused:7d3,unusedAtVersion:3,version:3,toc:1b74,occupancy:0f
+    chunk.4 = chunk:4,block:6,len:2,liveMax:1800,livePages:1,map:10,max:2300,next:8,pages:4,root:1000006f5d2,time:7d3,unusedAtVersion:4,version:4,toc:1e1a,occupancy:0d
+    meta.id = 1
+    root.1 = 14000011c14
+    root.2 = 14000002b54
+    root.5 = 1000000f9de
+map 0: 410 bytes, 17%
+map 1: 964 bytes, 41%
+map 2: 963 bytes, 41%
++0f80 chunkFooter chunk:5,block:2,version:5,fletcher:b0d0ddf6
+
+3000 chunkHeader chunk:6,block:3,len:1,pages:3,max:c00,map:14,next:4,root:18000022ed0,time:d55ce,version:6,toc:a58
++00ad leaf, map 2, 15 entries, 1098 bytes, maxLen 600
++04f7 leaf, map 1, 30 entries, 964 bytes, maxLen 400
++08bb leaf, map 0, 6 entries, 413 bytes, maxLen 200
+    chunk.4 = chunk:4,block:6,len:2,liveMax:1800,livePages:1,map:10,max:2300,next:8,pages:4,root:1000006f5d2,time:7d3,unusedAtVersion:4,version:4,toc:1e1a,occupancy:0d
+    chunk.5 = chunk:5,block:2,len:1,liveMax:0,livePages:0,map:12,max:a00,next:3,pages:3,root:14000020d10,time:2583a,unused:d55ce,unusedAtVersion:5,version:5,toc:9ce,occupancy:07
+    meta.id = 1
+    root.1 = 18000013dd4
+    root.2 = 18000002b56
+    root.5 = 1000000f9de
+map 0: 413 bytes, 16%
+map 1: 964 bytes, 38%
+map 2: 1098 bytes, 44%
++0f80 chunkFooter chunk:6,block:3,version:6,fletcher:c1d0e0f6
+
+4000 chunkHeader chunk:7,block:4,len:2,pages:4,max:1ba0,map:14,next:8,root:1c000056192,time:d61b6,version:7,toc:17f6
++00ad leaf, map 5, 25 entries, 5200 bytes, maxLen 1800
++14fd leaf, map f, 1 entries, 119 bytes, maxLen 80
++1574 leaf, map 10, 1 entries, 18 bytes, maxLen 20
++1586 leaf, map 0, 9 entries, 624 bytes, maxLen 300
+    chunk.4 = chunk:4,block:6,len:2,liveMax:0,livePages:0,map:10,max:2300,next:8,pages:4,root:1000006f5d2,time:7d3,unused:d61b6,unusedAtVersion:6,version:4,toc:1e1a,occupancy:0f
+    chunk.5 = chunk:5,block:2,len:1,liveMax:0,livePages:0,map:12,max:a00,next:3,pages:3,root:14000020d10,time:2583a,unused:d55ce,unusedAtVersion:5,version:5,toc:9ce,occupancy:07
+    chunk.6 = chunk:6,block:3,len:1,liveMax:a00,livePages:2,map:14,max:c00,next:4,pages:3,root:18000022ed0,time:d55ce,unusedAtVersion:6,version:6,toc:a58,occupancy:04
+    meta.id = 1
+    root.1 = 18000013dd4
+    root.10 = 1c000055d00
+    root.2 = 18000002b56
+    root.5 = 1c000002b5e
+    root.f = 1c000053f48
+map 0: 624 bytes, 10%
+map 5: 5200 bytes, 87%
+map f: 119 bytes, 1%
+map 10: 18 bytes, 0%
++1f80 chunkFooter chunk:7,block:4,version:7,fletcher:d2d0e3f6
+
+6000 chunkHeader chunk:4,block:6,len:2,pages:4,max:2300,map:10,next:8,root:1000006f5d2,time:7d3,version:4,toc:1e1a
++00ab leaf, map 2, 11 entries, 828 bytes, maxLen 400
++03e7 leaf, map 5, 25 entries, 5184 bytes, maxLen 1800
++1827 leaf, map 1, 30 entries, 944 bytes, maxLen 400
++1bd7 leaf, map 0, 7 entries, 579 bytes, maxLen 300
+    chunk.1 = chunk:1,block:2,len:1,liveMax:0,livePages:0,map:9,max:410,next:3,pages:4,root:400000f706,time:2,unused:5de,unusedAtVersion:2,version:1,toc:426,occupancy:0f
+    chunk.2 = chunk:2,block:3,len:1,liveMax:0,livePages:0,map:9,max:200,next:4,pages:2,root:8000005d0c,time:1f8,unused:5de,unusedAtVersion:2,version:2,toc:25a,occupancy:03
+    chunk.3 = chunk:3,block:4,len:2,liveMax:0,livePages:0,map:10,max:2100,next:6,pages:4,root:c000067790,time:5de,unused:7d3,unusedAtVersion:3,version:3,toc:1b74,occupancy:0f
+    meta.id = 1
+    root.1 = 100000609d4
+    root.2 = 10000002ad4
+    root.5 = 1000000f9de
+map 0: 579 bytes, 7%
+map 1: 944 bytes, 12%
+map 2: 828 bytes, 10%
+map 5: 5184 bytes, 68%
++1f80 chunkFooter chunk:4,block:6,version:4,fletcher:bdd0dff6
+
+8000 eof
+
+page size total: 18308 bytes, page count: 14, average page size: 1307 bytes
+map 0: 2026 bytes, 11%
+map 1: 2872 bytes, 15%
+map 2: 2889 bytes, 15%
+map 5: 10384 bytes, 56%
+map f: 119 bytes, 0%
+map 10: 18 bytes, 0%
+ERROR: org.h2.mvstore.MVStoreException: The read format 2 is smaller than the supported format 3 [2.2.224/5]
+org.h2.mvstore.MVStoreException: The read format 2 is smaller than the supported format 3 [2.2.224/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.FileStore.processCommonHeaderAttributes(FileStore.java:558)
+	at org.h2.mvstore.RandomAccessStore.readStoreHeader(RandomAccessStore.java:227)
+	at org.h2.mvstore.FileStore.start(FileStore.java:916)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:289)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.MVStoreTool.info(MVStoreTool.java:351)
+	at org.h2.tools.Recover.process(Recover.java:243)
+	at org.h2.tools.Recover.runTool(Recover.java:136)
+	at org.h2.tools.Recover.main(Recover.java:102)

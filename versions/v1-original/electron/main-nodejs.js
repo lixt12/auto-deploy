@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron');
+﻿const { app, BrowserWindow, Menu } = require('electron');
 const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
@@ -11,8 +11,8 @@ const BACKEND_CONFIG = {
     cwd: path.join(__dirname, '../backend-nodejs'),
     command: 'node',
     args: ['server.js'],
-    port: 8088,
-    healthCheckUrl: 'http://localhost:8088/health'
+    port: 18088,
+    healthCheckUrl: 'http://localhost:18088/health'
 };
 
 // 创建主窗口
@@ -292,7 +292,7 @@ async function checkBackendHealth() {
                     setTimeout(check, 1000);
                 } else {
                     console.error('❌ 后端健康检查失败:', error);
-                    showErrorDialog('后端连接失败', '无法连接到后端服务\n请检查8088端口是否被占用');
+                    showErrorDialog('后端连接失败', '无法连接到后端服务\n请检查18088端口是否被占用');
                 }
             });
 
@@ -437,3 +437,4 @@ process.on('uncaughtException', (error) => {
 process.on('unhandledRejection', (reason, promise) => {
     console.error('Unhandled Rejection at:', promise, 'reason:', reason);
 });
+

@@ -1,0 +1,7 @@
+2026-03-05 17:18:20 [[32minfo[39m] Initializing database...
+2026-03-05 17:18:20 [[32minfo[39m] 数据库连接成功: D:\IdeaProjects\12\auto-deploy\versions\v2-unified\src\backend\data\database.sqlite
+2026-03-05 17:18:20 [[32minfo[39m] Backend started successfully
+2026-03-05 17:18:20 [[32minfo[39m] Server URL: http://127.0.0.1:8088
+2026-03-05 17:18:20 [[32minfo[39m] Database: SQLite
+2026-03-05 17:18:20 [[32minfo[39m] Environment: development
+2026-03-05 17:18:21 [[32minfo[39m] POST /api/auth/login - 127.0.0.1

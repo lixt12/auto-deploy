@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, dialog, shell } = require('electron');
+﻿const { app, BrowserWindow, Menu, dialog, shell } = require('electron');
 const path = require('path');
 const { spawn } = require('child_process');
 const fs = require('fs');
@@ -76,12 +76,12 @@ async function startBackend() {
     console.log('JAR路径:', jarPath);
     
     // 检查端口是否可用
-    const portAvailable = await isPortAvailable(8088);
+    const portAvailable = await isPortAvailable(18088);
     if (!portAvailable) {
-      reject(new Error('端口8088已被占用，请关闭其他使用该端口的应用'));
+      reject(new Error('端口18088已被占用，请关闭其他使用该端口的应用'));
       return;
     }
-    console.log('端口8088检查通过');
+    console.log('端口18088检查通过');
     
     // 检查Java是否可用 - 尝试多个可能的路径
     let javaPath = 'java';
@@ -136,7 +136,7 @@ async function startBackend() {
       '-Djava.awt.headless=true',
       '-jar', 
       jarPath,
-      '--server.port=8088',
+      '--server.port=18088',
       '--spring.profiles.active=prod',
       '--logging.level.com.sipsg.autodeploy=INFO',
       '--logging.level.org.springframework=WARN',
@@ -189,7 +189,7 @@ async function startBackend() {
         
         // 解释常见的退出码
         if (code === 3221226505) {
-          errorMessage += '\n这通常是由于以下原因：\n1. Java环境问题\n2. 端口8088被占用\n3. JAR文件损坏或不完整';
+          errorMessage += '\n这通常是由于以下原因：\n1. Java环境问题\n2. 端口18088被占用\n3. JAR文件损坏或不完整';
         } else if (code === 1) {
           errorMessage += '\n应用启动失败，请检查日志';
         }
@@ -622,7 +622,7 @@ app.whenReady().then(async () => {
     console.error('启动失败:', error);
     splash.close();
     
-    dialog.showErrorBox('启动失败', `应用启动失败: ${error.message}\n\n请确保：\n1. Java环境已正确安装\n2. 端口8088未被占用\n3. 应用文件完整`);
+    dialog.showErrorBox('启动失败', `应用启动失败: ${error.message}\n\n请确保：\n1. Java环境已正确安装\n2. 端口18088未被占用\n3. 应用文件完整`);
     app.quit();
   }
 });
@@ -667,3 +667,4 @@ process.on('uncaughtException', (error) => {
 process.on('unhandledRejection', (reason, promise) => {
   console.error('未处理的Promise拒绝:', reason);
 });
+

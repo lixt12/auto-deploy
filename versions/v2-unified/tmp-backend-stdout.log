@@ -1,0 +1,14 @@
+2026-03-03 11:10:20 [[32minfo[39m] 初始化数据库...
+2026-03-03 11:10:20 [[33mwarn[39m] 已创建默认管理员账号: admin
+2026-03-03 11:10:20 [[33mwarn[39m] 管理员初始密码来自环境变量 DEFAULT_ADMIN_PASSWORD
+2026-03-03 11:10:20 [[32minfo[39m] 数据库连接成功: D:\IdeaProjects\12\auto-deploy\versions\v2-unified\src\backend\data\test-ssh-route.sqlite
+2026-03-03 11:10:20 [[32minfo[39m] 自动化部署系统后端启动成功
+2026-03-03 11:10:20 [[32minfo[39m] 服务地址: http://127.0.0.1:18088
+2026-03-03 11:10:20 [[32minfo[39m] 数据库: SQLite
+2026-03-03 11:10:20 [[32minfo[39m] 环境: production
+2026-03-03 11:10:20 [[32minfo[39m] GET /health - 127.0.0.1
+2026-03-03 11:10:20 [[32minfo[39m] POST /api/auth/login - 127.0.0.1
+2026-03-03 11:10:20 [[32minfo[39m] POST /api/servers - 127.0.0.1
+2026-03-03 11:10:20 [[32minfo[39m] User admin created server ssh-test-local (127.0.0.1:22)
+2026-03-03 11:10:20 [[32minfo[39m] POST /api/servers/1/test - 127.0.0.1
+2026-03-03 11:10:20 [[32minfo[39m] User admin testing SSH connection: ssh-test-local (127.0.0.1:22)

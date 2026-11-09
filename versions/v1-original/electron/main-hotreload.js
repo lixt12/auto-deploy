@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, ipcMain, dialog, shell } = require('electron');
+﻿const { app, BrowserWindow, Menu, ipcMain, dialog, shell } = require('electron');
 const path = require('path');
 const fs = require('fs');
 const { spawn } = require('child_process');
@@ -319,10 +319,10 @@ function showDevelopmentStatus() {
         function checkServices() {
           addLog('🔍 检查服务状态...', 'info');
           // 检查后端
-          fetch('http://localhost:8088/actuator/health')
+          fetch('http://localhost:18088/actuator/health')
             .then(response => {
               if (response.ok) {
-                updateStatus('backend', 'ready', 'http://localhost:8088');
+                updateStatus('backend', 'ready', 'http://localhost:18088');
                 addLog('✅ 后端服务正常', 'success');
               } else {
                 updateStatus('backend', 'error');
@@ -378,7 +378,7 @@ function showDevelopmentStatus() {
           addLog('🚀 加载应用界面...', 'info');
           // 检查服务是否就绪
           Promise.all([
-            fetch('http://localhost:8088/actuator/health'),
+            fetch('http://localhost:18088/actuator/health'),
             fetch('http://localhost:3000')
           ]).then(() => {
             addLog('✅ 服务检查完成，加载应用...', 'success');
@@ -485,15 +485,15 @@ function createDevelopmentMenu() {
         },
         {
           label: '🔧 后端地址',
-          click: () => shell.openExternal('http://localhost:8088')
+          click: () => shell.openExternal('http://localhost:18088')
         },
         {
           label: '📊 Health Check',
-          click: () => shell.openExternal('http://localhost:8088/actuator/health')
+          click: () => shell.openExternal('http://localhost:18088/actuator/health')
         },
         {
           label: '📊 H2 控制台',
-          click: () => shell.openExternal('http://localhost:8088/h2-console')
+          click: () => shell.openExternal('http://localhost:18088/h2-console')
         }
       ]
     }
@@ -569,7 +569,7 @@ function startBackend() {
     '--spring.devtools.restart.enabled=true',
     '--spring.devtools.livereload.enabled=true',
     '--logging.level.com.sipsg.autodeploy=DEBUG',
-    '--server.port=8088'
+    '--server.port=18088'
   ], {
     stdio: ['ignore', 'pipe', 'pipe']
   });
@@ -635,3 +635,4 @@ ipcMain.handle('restart-backend', restartBackend);
 ipcMain.handle('get-backend-status', () => isBackendReady);
 
 console.log('🔥 热重载开发环境已初始化');
+
